@@ -16,18 +16,18 @@ appearance:
 marketing:
   seo:
     site_type: Person
-    local_business_type: ''
-    org_name: ''
-    description: 'A highly-customizable Hugo academic resume theme powered by Wowchemy website builder.'
-    twitter: 'wowchemy'
+    local_business_type: 'Eidan Erlich'
+    org_name: 'Eidan Erlich'
+    description: 'My person portfolio'
+    # twitter: 'wowchemy'
   analytics:
-    google_analytics: ''
-    baidu_tongji: ''
-    google_tag_manager: ''
-    microsoft_clarity: ''  
+    google_analytics: 'Eidan Erlich'
+    baidu_tongji: 'Eidan Erlich'
+    google_tag_manager: 'Eidan Erlich'
+    microsoft_clarity: 'Eidan Erlich' 
   verification:
-    google: ''
-    baidu: ''
+    google: 'Eidan Erlich'
+    baidu: 'Eidan Erlich'
 
 # Site header
 
@@ -89,7 +89,7 @@ features:
       category: ''
       category_id: ''
   search:
-    provider: wowchemy
+    provider: Eidan Erlich
     algolia:
       app_id: ''
       api_key: ''
