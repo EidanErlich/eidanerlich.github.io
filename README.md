@@ -1,3 +1,3 @@
-# [My Personal Website](eidanerlich.github.io)
+# [My Personal Website](https://eidanerlich.github.io/)
 
-[![Screenshot](./preview.png)](eidanerlich.github.io)
+[![Screenshot](./preview.png)](https://eidanerlich.github.io/)
