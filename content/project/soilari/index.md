@@ -1,5 +1,5 @@
 ---
-title: Biomedical Surgical Instrument R&D
+title: SoilAri, data-driven optimization of small-scale farms
 summary: An accessible web and SMS platform for small-sclae farmers to get location-specific insights on their crops
 tags:
   - Machine Learning

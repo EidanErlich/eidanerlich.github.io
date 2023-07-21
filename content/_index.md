@@ -49,7 +49,7 @@ sections:
           # description: 90%
           icon: python
           icon_pack: fab
-        - name: robotics
+        - name: Robotics
           icon: robot
         - name: Machine learning & Deep Learning
           # description: 10%
