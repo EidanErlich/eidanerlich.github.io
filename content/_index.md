@@ -183,43 +183,43 @@ sections:
       flip_alt_rows: false
     design:
       columns: '1'
-  - block: accomplishments
-    content:
-      # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
-      title: 'Accomplish&shy;ments'
-      subtitle:
-      # Date format: https://wowchemy.com/docs/customization/#date-format
-      date_format: Jan 2006
-      # Accomplishments.
-      #   Add/remove as many `item` blocks below as you like.
-      #   `title`, `organization`, and `date_start` are the required parameters.
-      #   Leave other parameters empty if not required.
-      #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
-      items:
-        - certificate_url: https://www.kaggle.com/learn/certification/eidanerlich/intro-to-machine-learning
-          date_end: ''
-          date_start: '2023-01-02'
-          description: ''
-          organization: Kaggle
-          organization_url: https://www.kaggle.com/
-          title: Intro to Machine Learning
-          url: 'https://www.kaggle.com/learn/intro-to-machine-learning'
-        - certificate_url: https://www.edx.org
-          date_end: ''
-          date_start: '2023-01-01'
-          description: ''
-          organization: Kaggle
-          organization_url: https://www.kaggle.com/learn/certification/eidanerlich/intro-to-programming
-          title: Intro to programming
-          url: https://www.kaggle.com/learn/intro-to-programming
-        - certificate_url: https://natural-resources.canada.ca/our-natural-resources/minerals-mining/explosives-fireworks-and-ammunition/fireworks-and-pyrotechnics/fireworks-operator-certification/fireworks-operator-certification/9885
-          date_end: '2028-07-31'
-          date_start: '2020-07-13'
-          description: ''
-          organization: Natural Resources Canada Explosives Regulatory Division
-          organization_url: https://natural-resources.canada.ca/home
-          title: 'Fireworks Display Operator - Display Assistant'
-          url: ''
+  # - block: accomplishments
+  #   content:
+  #     # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
+  #     title: 'Accomplish&shy;ments'
+  #     subtitle:
+  #     # Date format: https://wowchemy.com/docs/customization/#date-format
+  #     date_format: Jan 2006
+  #     # Accomplishments.
+  #     #   Add/remove as many `item` blocks below as you like.
+  #     #   `title`, `organization`, and `date_start` are the required parameters.
+  #     #   Leave other parameters empty if not required.
+  #     #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
+  #     items:
+  #       - certificate_url: https://www.kaggle.com/learn/certification/eidanerlich/intro-to-machine-learning
+  #         date_end: ''
+  #         date_start: '2023-01-02'
+  #         description: ''
+  #         organization: Kaggle
+  #         organization_url: https://www.kaggle.com/
+  #         title: Intro to Machine Learning
+  #         url: 'https://www.kaggle.com/learn/intro-to-machine-learning'
+  #       - certificate_url: https://www.edx.org
+  #         date_end: ''
+  #         date_start: '2023-01-01'
+  #         description: ''
+  #         organization: Kaggle
+  #         organization_url: https://www.kaggle.com/learn/certification/eidanerlich/intro-to-programming
+  #         title: Intro to programming
+  #         url: https://www.kaggle.com/learn/intro-to-programming
+  #       - certificate_url: https://natural-resources.canada.ca/our-natural-resources/minerals-mining/explosives-fireworks-and-ammunition/fireworks-and-pyrotechnics/fireworks-operator-certification/fireworks-operator-certification/9885
+  #         date_end: '2028-07-31'
+  #         date_start: '2020-07-13'
+  #         description: ''
+  #         organization: Natural Resources Canada Explosives Regulatory Division
+  #         organization_url: https://natural-resources.canada.ca/home
+  #         title: 'Fireworks Display Operator - Display Assistant'
+  #         url: ''
   # - block: markdown
   #   content:
   #     title: Gallery
