@@ -24,7 +24,7 @@ organizations:
     url: https://www.mitpittrw.com/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include Computer vision, Computer graphics, SLAM algorithms, ML in healthcare.
+bio: My interests include Computer vision, Computer graphics, SLAM algorithms, ML in healthcare.
 
 # Interests to show in About widget
 interests:
@@ -67,7 +67,7 @@ social:
     link: https://github.com/eidanerlich
   - icon: linkedin
     icon_pack: fab
-    link: https://www.linkedin.com/eidanerlich
+    link: https://www.linkedin.com/in/eidanerlich
   # Link to a PDF of your resume/CV.
   # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
   # and uncomment the lines below.
