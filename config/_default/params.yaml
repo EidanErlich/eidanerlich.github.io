@@ -17,17 +17,16 @@ marketing:
   seo:
     site_type: Person
     local_business_type: 'Eidan Erlich'
-    org_name: 'Eidan Erlich'
-    description: 'My person portfolio'
-    # twitter: 'wowchemy'
+    org_name: ''
+    description: 'My personal portfolio'
   analytics:
-    google_analytics: 'Eidan Erlich'
-    baidu_tongji: 'Eidan Erlich'
-    google_tag_manager: 'Eidan Erlich'
-    microsoft_clarity: 'Eidan Erlich' 
+    google_analytics: ''
+    baidu_tongji: ''
+    google_tag_manager: ''
+    microsoft_clarity: '' 
   verification:
-    google: 'Eidan Erlich'
-    baidu: 'Eidan Erlich'
+    google: ''
+    baidu: ''
 
 # Site header
 
@@ -89,7 +88,7 @@ features:
       category: ''
       category_id: ''
   search:
-    provider: Eidan Erlich
+    provider: 
     algolia:
       app_id: ''
       api_key: ''
