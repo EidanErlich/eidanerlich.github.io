@@ -1485,3 +1485,74 @@ section,
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
+
+/* General layout for the timeline */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* One column per year (5 years in total: 2021-2025) */
+  gap: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+/* Style for each timeline item */
+.item {
+  padding: 20px;
+  color: white;
+  border-radius: 8px;
+  position: relative;
+  margin: 5px 0;
+}
+
+/* Color for specific roles and education */
+.general-manager {
+  background-color: #007bff;
+}
+
+.ml-intern {
+  background-color: #28a745;
+}
+
+.perception-dev {
+  background-color: #17a2b8;
+}
+
+.student-it {
+  background-color: #6c757d;
+}
+
+.mechatronics {
+  background-color: #dc3545;
+}
+
+/* Overlapping styles */
+.item:not(:first-child) {
+  margin-top: -30px;  /* Overlap by lifting the elements up */
+  z-index: 1; /* Ensures stacking of overlapping elements */
+}
+
+/* Optional: Add grid behavior to stretch the items according to the timeline */
+.item span {
+  display: block;
+  font-size: 0.8em;
+  color: #fff;
+}
+
+/* Optional: Vertical Line for Visual Timeline */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: #ccc;
+  z-index: 0;
+}
+
+/* Optional: Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .timeline {
+    grid-template-columns: repeat(3, 1fr); /* Adjust columns for smaller screens */
+  }
+}

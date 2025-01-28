@@ -6,6 +6,37 @@
 * License: https://bootstrapmade.com/license/
 */
 
+// import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+// import 'react-vertical-timeline-component/style.min.css';
+
+// function Timeline() {
+//   return (
+//     <VerticalTimeline>
+//       <VerticalTimelineElement
+//         className="vertical-timeline-element--work"
+//         date="2024 - 2025"
+//         contentStyle={{ background: '#6b6bff', color: '#fff' }}
+//         contentArrowStyle={{ borderRight: '7px solid  #6b6bff' }}
+//         iconStyle={{ background: '#6b6bff', color: '#fff' }}
+//       >
+//         <h3 className="vertical-timeline-element-title">General Manager</h3>
+//         <h4 className="vertical-timeline-element-subtitle">MIT-PITT-RW</h4>
+//       </VerticalTimelineElement>
+
+//       <VerticalTimelineElement
+//         className="vertical-timeline-element--education"
+//         date="2021 - 2025"
+//         contentStyle={{ background: '#e86971', color: '#fff' }}
+//         iconStyle={{ background: '#e86971', color: '#fff' }}
+//       >
+//         <h3 className="vertical-timeline-element-title">Mechatronics</h3>
+//         <h4 className="vertical-timeline-element-subtitle">University of Waterloo</h4>
+//       </VerticalTimelineElement>
+//     </VerticalTimeline>
+//   );
+// }
+
+
 (function() {
   "use strict";
 
