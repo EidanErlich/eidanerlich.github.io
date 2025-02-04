@@ -34,6 +34,62 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <!-- Add this CSS before the closing </head> tag -->
+  <style>
+    .experience-card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-title {
+      color: #2b2b2b;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .company-name {
+      color: #666;
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .location-date {
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .badge {
+      padding: 0.5em 1em;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    .section-title {
+      margin-bottom: 2rem;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 70px;
+      background: var(--primary-color);
+    }
+  </style>
 </head>
 
 <body class="resume-page">
@@ -88,46 +144,120 @@
     </div><!-- End Page Title -->
 
       <!-- Resume Section -->
-    <section id="resume" class="resume section">
+    <section id="experience" class="section">
       <div class="container">
         <div class="row">
-          <div data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Resume</h3>
-            <iframe src="assets/Eidan_Resume.pdf" width="100%" height="900"></iframe>
-
-            <!-- <div class="resume-item">
-              <h4>Aircraft Production Research Assistant</h4>
-              <h5>Jan 2024 - April 2024</h5>
-              <p><em>Institute of Aircraft Production Technology (Airbus) – TU Hamburg | Hamburg, Germany</em></p>
-              <ul>
-                <li>Led and architected a mobile, multimodal, vision-based data acquisition system detailed in a conference proceeding</li>
-                        <li>Fused and calibrated cameras, LiDARs, and IR sensors, enabling the generation of a multi-model dense reconstruction of the environment</li>
-                      </ul>
-            </div>Edn Resume Item -->
-
-            <!-- <div class="resume-item">
-              <h4>Machine Learning Research Intern</h4>
-              <h5>May 2023 – Aug 2023</h5>
-              <p><em>Monsters Aliens Robots Zombies | Toronto, Canada</em></p>
-              <ul>
-                <li>Fine-tuned a CNN and GAN model pipeline for feature recognition and augmentation for effective lip syncing</li>
-                <li>Created a high-level architecture for video synthesis using Latent Diffusion with image & audio conditional encoding</li>
-                <li>Implemented a highly requested user feature of multi format compatibility, driving revenue growth of over $150,000</li>
-                <li>Optimized training pipeline by creating a cloud-based queue system, reducing training time by over 40%</li>
-              </ul>
-            </div>End Resume Item -->
-
-            <!-- <div class="resume-item">
-              <h4>General Manager</h4>
-              <h5>Dec 2023 – Present</h5>
-              <p><em>MIT-PITT-RW Autonomous Racing - Indy Autonomous Challenge | Waterloo, Canada</em></p>
-              <ul>
-                <li>Lead a team of 45 undergraduate and graduate students in developing the software driving a fully autonomous Indy racecar</li>
-                <li>Direct both technical development and business strategy by orchestrating strategic plans and setting achievable KPIs</li>
-              </ul>
-              </li>
-            </ul> -->
+          <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="section-title" data-aos="fade-up">Professional Experience</h3>
+              <button id="toggleResume" class="btn btn-primary">
+                <i class="bi bi-chevron-down"></i> Show Full Resume
+              </button>
+            </div>
           </div>
+        </div>
+
+        <div id="resumeWrapper" style="display: none; transition: all 0.3s ease; margin-bottom: 2rem;">
+          <iframe src="assets/Eidan_Resume.pdf" width="100%" height="900"></iframe>
+        </div>
+
+        <div class="row g-4">
+          <!-- Current Research Position -->
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="card experience-card h-100">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h4 class="card-title">Research Assistant</h4>
+                  <span class="badge bg-primary">Current</span>
+                </div>
+                <h5 class="company-name">Centre for Advanced Materials Joining</h5>
+                <div class="location-date">
+                  <i class="bi bi-geo-alt"></i> Waterloo, Canada
+                  <span class="mx-2">•</span>
+                  <i class="bi bi-calendar"></i> Jan 2025 - Present
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Symphonic Labs -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card experience-card h-100">
+              <div class="card-body">
+                <h4 class="card-title">Machine Learning Research Intern</h4>
+                <h5 class="company-name">Symphonic Labs</h5>
+                <div class="location-date">
+                  <i class="bi bi-geo-alt"></i> San Francisco, USA
+                  <span class="mx-2">•</span>
+                  <i class="bi bi-calendar"></i> Sep 2024 - Dec 2024
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Airbus -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card experience-card h-100">
+              <div class="card-body">
+                <h4 class="card-title">Aircraft Production Research Assistant</h4>
+                <h5 class="company-name">Institute of Aircraft Production Technology (Airbus)</h5>
+                <div class="location-date">
+                  <i class="bi bi-geo-alt"></i> Hamburg, Germany
+                  <span class="mx-2">•</span>
+                  <i class="bi bi-calendar"></i> Jan 2024 - April 2024
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MARZ -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card experience-card h-100">
+              <div class="card-body">
+                <h4 class="card-title">Machine Learning Research Intern</h4>
+                <h5 class="company-name">Monsters Aliens Robots Zombies</h5>
+                <div class="location-date">
+                  <i class="bi bi-geo-alt"></i> Toronto, Canada
+                  <span class="mx-2">•</span>
+                  <i class="bi bi-calendar"></i> May 2023 - Aug 2023
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vitreous -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card experience-card h-100">
+              <div class="card-body">
+                <h4 class="card-title">Biomedical Research Lead</h4>
+                <h5 class="company-name">Vitreous Retina Macula Specialists of Toronto</h5>
+                <div class="location-date">
+                  <i class="bi bi-geo-alt"></i> Toronto, Canada
+                  <span class="mx-2">•</span>
+                  <i class="bi bi-calendar"></i> Feb 2022 - Oct 2022
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MIT-PITT-RW -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="card experience-card h-100">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h4 class="card-title">General Manager</h4>
+                  <span class="badge bg-primary">Current</span>
+                </div>
+                <h5 class="company-name">MIT-PITT-RW Autonomous Racing</h5>
+                <div class="location-date">
+                  <i class="bi bi-geo-alt"></i> Waterloo, Canada
+                  <span class="mx-2">•</span>
+                  <i class="bi bi-calendar"></i> Feb 2023 - Present
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -217,6 +347,22 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.getElementById('toggleResume').addEventListener('click', function() {
+      const resumeWrapper = document.getElementById('resumeWrapper');
+      const button = this;
+      const icon = button.querySelector('i');
+      
+      if (resumeWrapper.style.display === 'none') {
+        resumeWrapper.style.display = 'block';
+        button.innerHTML = '<i class="bi bi-chevron-up"></i> Hide Resume';
+      } else {
+        resumeWrapper.style.display = 'none';
+        button.innerHTML = '<i class="bi bi-chevron-down"></i> Show Full Resume';
+      }
+    });
+  </script>
 
 </body>
 
