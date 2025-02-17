@@ -166,6 +166,63 @@
     .close-button:hover {
         color: var(--primary-color);
     }
+
+    .experience-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .experience-modal-content {
+        position: relative;
+        width: 90%;
+        max-width: 600px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .experience-description {
+        margin: 20px 0;
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .experience-link {
+        display: inline-block;
+        color: #0056b3;
+        text-decoration: none;
+        margin-top: 15px;
+        transition: color 0.3s ease;
+    }
+
+    .experience-link:hover {
+        color: #007bff;
+    }
+
+    .experience-modal .close-button {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #666;
+        transition: color 0.3s ease;
+    }
+
+    .experience-modal .close-button:hover {
+        color: var(--primary-color);
+    }
   </style>
 </head>
 
@@ -235,13 +292,13 @@
         <div class="row g-4">
           <!-- Current Research Position -->
           <div class="col-lg-6" data-aos="fade-up">
-            <div class="card experience-card h-100">
+            <div class="card experience-card h-100" id="camjCard">
               <div class="card-body">
                 <div class="d-flex justify-content-between">
                   <h4 class="card-title">Research Assistant</h4>
                   <span class="badge bg-primary">Current</span>
                 </div>
-                <h5 class="company-name">Centre for Advanced Materials Joining</h5>
+                <h5 class="company-name">University of Waterloo, Centre for Advanced Materials Joining</h5>
                 <div class="location-date">
                   <i class="bi bi-geo-alt"></i> Waterloo, Canada
                   <span class="mx-2">•</span>
@@ -253,7 +310,7 @@
 
           <!-- Symphonic Labs -->
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="card experience-card h-100">
+            <div class="card experience-card h-100" id="symphonicCard">
               <div class="card-body">
                 <h4 class="card-title">Machine Learning Research Intern</h4>
                 <h5 class="company-name">Symphonic Labs</h5>
@@ -267,8 +324,8 @@
           </div>
 
           <!-- Airbus -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="card experience-card h-100">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="card experience-card h-100" id="airbusCard">
               <div class="card-body">
                 <h4 class="card-title">Aircraft Production Research Assistant</h4>
                 <h5 class="company-name">Institute of Aircraft Production Technology (Airbus)</h5>
@@ -282,50 +339,125 @@
           </div>
 
           <!-- MARZ -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="card experience-card h-100">
-              <div class="card-body">
-                <h4 class="card-title">Machine Learning Research Intern</h4>
-                <h5 class="company-name">Monsters Aliens Robots Zombies</h5>
-                <div class="location-date">
-                  <i class="bi bi-geo-alt"></i> Toronto, Canada
-                  <span class="mx-2">•</span>
-                  <i class="bi bi-calendar"></i> May 2023 - Aug 2023
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card experience-card h-100" id="marzCard">
+                <div class="card-body">
+                    <h4 class="card-title">Machine Learning Research Intern</h4>
+                    <h5 class="company-name">Monsters Aliens Robots Zombies</h5>
+                    <div class="location-date">
+                        <i class="bi bi-geo-alt"></i> Toronto, Canada
+                        <span class="mx-2">•</span>
+                        <i class="bi bi-calendar"></i> May 2023 - Aug 2023
+                    </div>
                 </div>
-              </div>
             </div>
           </div>
 
           <!-- Vitreous -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="card experience-card h-100">
-              <div class="card-body">
-                <h4 class="card-title">Biomedical Research Lead</h4>
-                <h5 class="company-name">Vitreous Retina Macula Specialists of Toronto</h5>
-                <div class="location-date">
-                  <i class="bi bi-geo-alt"></i> Toronto, Canada
-                  <span class="mx-2">•</span>
-                  <i class="bi bi-calendar"></i> Feb 2022 - Oct 2022
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="card experience-card h-100" id="vitreousCard">
+                <div class="card-body">
+                    <h4 class="card-title">Technical Biomedical R&D Project Lead</h4>
+                    <h5 class="company-name">Vitreous Retina Macula Specialists of Toronto</h5>
+                    <div class="location-date">
+                        <i class="bi bi-geo-alt"></i> Toronto, Canada
+                        <span class="mx-2">•</span>
+                        <i class="bi bi-calendar"></i> Feb 2022 - Oct 2022
+                    </div>
                 </div>
-              </div>
             </div>
           </div>
 
           <!-- MIT-PITT-RW -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card experience-card h-100" id="mitrwCard">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <h4 class="card-title">General Manager</h4>
+                        <span class="badge bg-primary">Current</span>
+                    </div>
+                    <h5 class="company-name">MIT-PITT-RW</h5>
+                    <div class="location-date">
+                        <i class="bi bi-geo-alt"></i> Waterloo, Canada
+                        <span class="mx-2">•</span>
+                        <i class="bi bi-calendar"></i> Dec 2023 - Present
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- Victory Fireworks -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="350">
+            <div class="card experience-card h-100" id="fireworksCard">
+                <div class="card-body">
+                    <h4 class="card-title">Fireworks Display Assistant</h4>
+                    <h5 class="company-name">Victory Fireworks</h5>
+                    <div class="location-date">
+                        <i class="bi bi-geo-alt"></i> Toronto, Canada
+                        <span class="mx-2">•</span>
+                        <i class="bi bi-calendar"></i> May 2021 - Mar 2024
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- ILLUMITI -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card experience-card h-100" id="illumitiCard">
+                <div class="card-body">
+                    <h4 class="card-title">IT Operations and Optimization Analyst</h4>
+                    <h5 class="company-name">ILLUMITI</h5>
+                    <div class="location-date">
+                        <i class="bi bi-geo-alt"></i> Markham, Canada
+                        <span class="mx-2">•</span>
+                        <i class="bi bi-calendar"></i> Jul 2022 - Aug 2022
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- Chartwell -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="450">
+            <div class="card experience-card h-100" id="chartwellCard">
+                <div class="card-body">
+                    <h4 class="card-title">Student IT Support</h4>
+                    <h5 class="company-name">Chartwell Retirement Residences</h5>
+                    <div class="location-date">
+                        <i class="bi bi-geo-alt"></i> Mississauga, Canada
+                        <span class="mx-2">•</span>
+                        <i class="bi bi-calendar"></i> Jul 2021 - Aug 2021
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- YRSA -->
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="card experience-card h-100">
-              <div class="card-body">
-                <div class="d-flex justify-content-between">
-                  <h4 class="card-title">General Manager</h4>
-                  <span class="badge bg-primary">Current</span>
+            <div class="card experience-card h-100" id="yrsaCard">
+                <div class="card-body">
+                    <h4 class="card-title">Soccer Referee</h4>
+                    <h5 class="company-name">York Region Soccer Association</h5>
+                    <div class="location-date">
+                        <i class="bi bi-geo-alt"></i> York Region, Canada
+                        <span class="mx-2">•</span>
+                        <i class="bi bi-calendar"></i> Mar 2017 - Feb 2020
+                    </div>
                 </div>
-                <h5 class="company-name">MIT-PITT-RW Autonomous Racing</h5>
-                <div class="location-date">
-                  <i class="bi bi-geo-alt"></i> Waterloo, Canada
-                  <span class="mx-2">•</span>
-                  <i class="bi bi-calendar"></i> Feb 2023 - Present
+            </div>
+          </div>
+
+          <!-- Bayview Glen -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="550">
+            <div class="card experience-card h-100" id="bayviewCard">
+                <div class="card-body">
+                    <h4 class="card-title">Junior Counselor</h4>
+                    <h5 class="company-name">Bayview Glen Day Camp</h5>
+                    <div class="location-date">
+                        <i class="bi bi-geo-alt"></i> Toronto, Canada
+                        <span class="mx-2">•</span>
+                        <i class="bi bi-calendar"></i> Jul 2018 - Aug 2018
+                    </div>
                 </div>
-              </div>
             </div>
           </div>
 
@@ -442,6 +574,164 @@
                 document.body.style.overflow = 'auto';
             }
         });
+
+        const camjCard = document.getElementById('camjCard');
+        const camjModal = document.getElementById('camjModal');
+        const camjCloseButton = camjModal.querySelector('.close-button');
+
+        camjCard.addEventListener('click', () => {
+            camjModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+
+        camjCloseButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            camjModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        camjModal.addEventListener('click', (e) => {
+            if (e.target === camjModal) {
+                camjModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        const symphonicCard = document.getElementById('symphonicCard');
+        const symphonicModal = document.getElementById('symphonicModal');
+        const symphonicCloseButton = symphonicModal.querySelector('.close-button');
+
+        symphonicCard.addEventListener('click', () => {
+            symphonicModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+
+        symphonicCloseButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            symphonicModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        symphonicModal.addEventListener('click', (e) => {
+            if (e.target === symphonicModal) {
+                symphonicModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        const airbusCard = document.getElementById('airbusCard');
+        const airbusModal = document.getElementById('airbusModal');
+        const airbusCloseButton = airbusModal.querySelector('.close-button');
+
+        airbusCard.addEventListener('click', () => {
+            airbusModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+
+        airbusCloseButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            airbusModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        airbusModal.addEventListener('click', (e) => {
+            if (e.target === airbusModal) {
+                airbusModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        const marzCard = document.getElementById('marzCard');
+        const marzModal = document.getElementById('marzModal');
+        const marzCloseButton = marzModal.querySelector('.close-button');
+
+        marzCard.addEventListener('click', () => {
+            marzModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+
+        marzCloseButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            marzModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        marzModal.addEventListener('click', (e) => {
+            if (e.target === marzModal) {
+                marzModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        const vitreousCard = document.getElementById('vitreousCard');
+        const vitreousModal = document.getElementById('vitreousModal');
+        const vitreousCloseButton = vitreousModal.querySelector('.close-button');
+
+        vitreousCard.addEventListener('click', () => {
+            vitreousModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+
+        vitreousCloseButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            vitreousModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        vitreousModal.addEventListener('click', (e) => {
+            if (e.target === vitreousModal) {
+                vitreousModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        const mitrwCard = document.getElementById('mitrwCard');
+        const mitrwModal = document.getElementById('mitrwModal');
+        const mitrwCloseButton = mitrwModal.querySelector('.close-button');
+
+        mitrwCard.addEventListener('click', () => {
+            mitrwModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+
+        mitrwCloseButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mitrwModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        mitrwModal.addEventListener('click', (e) => {
+            if (e.target === mitrwModal) {
+                mitrwModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Victory Fireworks
+        const fireworksCard = document.getElementById('fireworksCard');
+        const fireworksModal = document.getElementById('fireworksModal');
+        const fireworksCloseButton = fireworksModal.querySelector('.close-button');
+
+        fireworksCard.addEventListener('click', () => {
+            fireworksModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+
+        fireworksCloseButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            fireworksModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        fireworksModal.addEventListener('click', (e) => {
+            if (e.target === fireworksModal) {
+                fireworksModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Add similar event listeners for other new cards
+        // ... (repeat for illumitiCard, chartwellCard, yrsaCard, and bayviewCard)
     });
   </script>
 
@@ -450,6 +740,242 @@
     <div class="resume-modal-content">
         <button class="close-button">&times;</button>
         <iframe src="assets/Eidan_Resume.pdf"></iframe>
+    </div>
+  </div>
+
+  <!-- Add this modal structure before the closing </body> tag -->
+  <div class="experience-modal" id="camjModal">
+    <div class="experience-modal-content">
+        <button class="close-button">&times;</button>
+        <h4 class="card-title">Research Assistant</h4>
+        <h5 class="company-name">University of Waterloo, Centre for Advanced Materials Joining</h5>
+        <div class="location-date">
+            <i class="bi bi-geo-alt"></i> Waterloo, Canada
+            <span class="mx-2">•</span>
+            <i class="bi bi-calendar"></i> Jan 2025 - Present
+        </div>
+        <p class="experience-description">
+            Researching and developing Machine Learning Tools to Predict RSW Nugget Quality
+        </p>
+        <a href="https://uwaterloo.ca/centre-advanced-materials-joining/" class="experience-link" target="_blank">
+            Visit CAMJ Website <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+  </div>
+
+  <!-- Add this new modal before the closing </body> tag -->
+  <div class="experience-modal" id="symphonicModal">
+    <div class="experience-modal-content">
+        <button class="close-button">&times;</button>
+        <h4 class="card-title">Machine Learning Research Intern</h4>
+        <h5 class="company-name">Symphonic Labs</h5>
+        <div class="location-date">
+            <i class="bi bi-geo-alt"></i> San Francisco, USA
+            <span class="mx-2">•</span>
+            <i class="bi bi-calendar"></i> Sep 2024 - Dec 2024
+        </div>
+        <p class="experience-description">
+            Knowing what you're saying without any audio
+        </p>
+        <a href="https://www.symphoniclabs.com/" class="experience-link" target="_blank">
+            Visit Symphonic Labs Website <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+  </div>
+
+  <!-- Add this new modal before the closing </body> tag -->
+  <div class="experience-modal" id="airbusModal">
+    <div class="experience-modal-content">
+        <button class="close-button">&times;</button>
+        <h4 class="card-title">Aircraft Production Research Assistant</h4>
+        <h5 class="company-name">Institute of Aircraft Production Technology (Airbus)</h5>
+        <div class="location-date">
+            <i class="bi bi-geo-alt"></i> Hamburg, Germany
+            <span class="mx-2">•</span>
+            <i class="bi bi-calendar"></i> Jan 2024 - April 2024
+        </div>
+        <p class="experience-description">
+            Real time mobile manufacturing monitoring for Airbus
+            <br><br>
+            • Published two papers on my research at the Conference on Intelligent Computation in Manufacturing Engineering (CIRP ICME)
+        </p>
+        <a href="https://www.tuhh.de/ifpt/en/institut/translate-to-english-ueberblick" class="experience-link" target="_blank">
+            Visit IFPT Website <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+  </div>
+
+  <!-- Add these new modals before the closing </body> tag -->
+  <div class="experience-modal" id="marzModal">
+    <div class="experience-modal-content">
+        <button class="close-button">&times;</button>
+        <h4 class="card-title">Machine Learning Research Intern</h4>
+        <h5 class="company-name">Monsters Aliens Robots Zombies</h5>
+        <div class="location-date">
+            <i class="bi bi-geo-alt"></i> Toronto, Canada
+            <span class="mx-2">•</span>
+            <i class="bi bi-calendar"></i> May 2023 - Sep 2023
+        </div>
+        <p class="experience-description">
+            Deepfakes for Hollywood
+        </p>
+        <a href="https://www.lipdub.ai/" class="experience-link" target="_blank">
+            Visit MARZ Website <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+  </div>
+
+  <div class="experience-modal" id="vitreousModal">
+    <div class="experience-modal-content">
+        <button class="close-button">&times;</button>
+        <h4 class="card-title">Technical Biomedical R&D Project Lead</h4>
+        <h5 class="company-name">Vitreous Retina Macula Specialists of Toronto</h5>
+        <div class="location-date">
+            <i class="bi bi-geo-alt"></i> Toronto, Canada
+            <span class="mx-2">•</span>
+            <i class="bi bi-calendar"></i> Feb 2022 - Oct 2022
+        </div>
+        <p class="experience-description">
+            3D printing ophthalmological surgical instruments
+        </p>
+        <a href="https://www.vrmto.com/" class="experience-link" target="_blank">
+            Visit VRMTO Website <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+  </div>
+
+  <!-- Add this new modal before the closing </body> tag -->
+  <div class="experience-modal" id="mitrwModal">
+    <div class="experience-modal-content">
+        <button class="close-button">&times;</button>
+        <div class="current-role">
+            <h4 class="card-title">General Manager</h4>
+            <h5 class="company-name">MIT-PITT-RW</h5>
+            <div class="location-date">
+                <i class="bi bi-geo-alt"></i> Waterloo, Canada
+                <span class="mx-2">•</span>
+                <i class="bi bi-calendar"></i> Dec 2023 - Present
+            </div>
+            <p class="experience-description">
+                Lead a team of 40+ researchers to make a race car go fast by itself
+            </p>
+        </div>
+        
+        <hr style="margin: 20px 0; border-top: 1px solid #eee;">
+        
+        <div class="previous-role">
+            <h4 class="card-title">Perception Software Developer</h4>
+            <div class="location-date">
+                <i class="bi bi-calendar"></i> Jan 2023 - Jan 2024
+            </div>
+            <p class="experience-description">
+                Collaborating with undergraduate and graduate students to integrate data from 6 cameras, 3 Lidar, and 3 radar sensors
+            </p>
+        </div>
+        
+        <a href="https://www.mitpittrw.com/" class="experience-link" target="_blank">
+            Visit MIT-PITT-RW Website <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+  </div>
+
+  <!-- Add these new modals before the closing </body> tag -->
+  <div class="experience-modal" id="fireworksModal">
+    <div class="experience-modal-content">
+        <button class="close-button">&times;</button>
+        <h4 class="card-title">Fireworks Display Assistant</h4>
+        <h5 class="company-name">Victory Fireworks</h5>
+        <div class="location-date">
+            <i class="bi bi-geo-alt"></i> Toronto, Canada
+            <span class="mx-2">•</span>
+            <i class="bi bi-calendar"></i> May 2021 - Mar 2024
+        </div>
+        <p class="experience-description">
+            Professional fireworks for the largest fireworks shows in Canada
+        </p>
+        <div class="experience-links">
+            <a href="https://youtu.be/R-HqWGlsmXE?si=2-G8xn0fnW07sUjK" class="experience-link" target="_blank">
+                Watch Demo <i class="bi bi-youtube"></i>
+            </a>
+            <br>
+            <a href="https://www.victoryfireworks.com/" class="experience-link" target="_blank">
+                Visit Store Website <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+  </div>
+
+  <div class="experience-modal" id="illumitiModal">
+    <div class="experience-modal-content">
+        <button class="close-button">&times;</button>
+        <h4 class="card-title">IT Operations and Optimization Analyst</h4>
+        <h5 class="company-name">ILLUMITI</h5>
+        <div class="location-date">
+            <i class="bi bi-geo-alt"></i> Markham, Canada
+            <span class="mx-2">•</span>
+            <i class="bi bi-calendar"></i> Jul 2022 - Aug 2022
+        </div>
+        <p class="experience-description">
+            Automated data analytics using Excel and VBA
+        </p>
+    </div>
+  </div>
+
+  <div class="experience-modal" id="chartwellModal">
+    <div class="experience-modal-content">
+        <button class="close-button">&times;</button>
+        <h4 class="card-title">Student IT Support</h4>
+        <h5 class="company-name">Chartwell Retirement Residences</h5>
+        <div class="location-date">
+            <i class="bi bi-geo-alt"></i> Mississauga, Canada
+            <span class="mx-2">•</span>
+            <i class="bi bi-calendar"></i> Jul 2021 - Aug 2021
+        </div>
+        <p class="experience-description">
+            Provided technical support, including ticket queue management, PC configuration, and headed hardware repairs
+        </p>
+    </div>
+  </div>
+
+  <div class="experience-modal" id="yrsaModal">
+    <div class="experience-modal-content">
+        <button class="close-button">&times;</button>
+        <h4 class="card-title">Soccer Referee</h4>
+        <h5 class="company-name">York Region Soccer Association</h5>
+        <div class="location-date">
+            <i class="bi bi-geo-alt"></i> York Region, Canada
+            <span class="mx-2">•</span>
+            <i class="bi bi-calendar"></i> Mar 2017 - Feb 2020
+        </div>
+        <p class="experience-description">
+            Head referee for small-sided soccer games for children aged 6-11
+            <br><br>
+            • Keeping children safe while enforcing the rules of the game
+            <br>
+            • Communicating with coaches and players
+            <br>
+            • Ensuring all participants enjoy the game
+        </p>
+    </div>
+  </div>
+
+  <div class="experience-modal" id="bayviewModal">
+    <div class="experience-modal-content">
+        <button class="close-button">&times;</button>
+        <h4 class="card-title">Junior Counselor</h4>
+        <h5 class="company-name">Bayview Glen Day Camp</h5>
+        <div class="location-date">
+            <i class="bi bi-geo-alt"></i> Toronto, Canada
+            <span class="mx-2">•</span>
+            <i class="bi bi-calendar"></i> Jul 2018 - Aug 2018
+        </div>
+        <p class="experience-description">
+            • Ensured camper safety during meals and activities
+            <br>
+            • Created strong bonds with campers
+            <br>
+            • Planed, instructed, and oversaw activities
+        </p>
     </div>
   </div>
 
