@@ -34,6 +34,91 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <!-- Add this before </head> -->
+  <style>
+    .talks .talk-item {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .talks .talk-title {
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    .talks .talk-description {
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+    }
+
+    .talks .talk-links .btn {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+      transition: all 0.3s ease;
+    }
+
+    .talks .talk-links .btn:hover {
+      background: var(--color-primary);
+      color: #000;
+    }
+
+    .modal-content {
+      background: rgba(25, 25, 25, 0.95);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .modal-header {
+      padding: 1rem 1rem 0;
+    }
+
+    .modal-body {
+      padding: 1rem 2rem 2rem;
+    }
+
+    .btn-close-white {
+      filter: invert(1) grayscale(100%) brightness(200%);
+    }
+
+    .service-item {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .publication-title {
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    .publication-authors {
+      color: rgba(255, 255, 255, 0.9);
+      font-style: italic;
+    }
+
+    .publication-description {
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+    }
+
+    .publication-links .btn {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+      transition: all 0.3s ease;
+    }
+
+    .publication-links .btn:hover {
+      background: var(--color-primary);
+      color: #000;
+    }
+  </style>
 </head>
 
 <body class="services-page">
@@ -111,47 +196,198 @@
         <div class="row gy-4">
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up">
-            <div class="service-item position-relative">
+            <div class="service-item position-relative" data-bs-toggle="modal" data-bs-target="#bettyModal" style="cursor: pointer;">
               <div class="icon">
                 <i class="bi bi-bounding-box"></i>
               </div>
-              <!-- <a href="service-details.html" class="stretched-link"> -->
-                <h3>BETTY Dataset: A Multi-modal Dataset for Full-Stack Autonomy</h3>
-              </a>
+              <h3>BETTY Dataset: A Multi-modal Dataset for Full-Stack Autonomy</h3>
               <p>2025 IEEE International Conference on Robotics and Automation (ICRA). Micah Nye*, Ayoub Raji, Andrew Saba, Eidan Erlich, Robert Exley, Aragya Goyal, Alexander Matros, Ritesh Misra, Matthew Sivaprakasam, Deva Ramanan, Sebastian Scherer</p>
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
+            <div class="service-item position-relative" data-bs-toggle="modal" data-bs-target="#passiveMonitoringModal" style="cursor: pointer;">
               <div class="icon">
                 <i class="bi bi-activity"></i>
               </div>
-              <!-- <a href="service-details.html" class="stretched-link"> -->
-                <h3>Mobile, multimodal, vision-based data acquisition system for passive production and intralogistics monitoring. </h3>
-              </a>
+              <h3>Mobile, multimodal, vision-based data acquisition system for passive production and intralogistics monitoring</h3>
               <p>18th CIRP Conference on Intelligent Computation in Manufacturing Engineering. Moencka, K., Prüntea, P., Determann, J., Erlich, E., Patki, D., Bitte, F., Gomse, M., & Schüppstuhl, T. (2024). </p>
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative" data-bs-toggle="modal" data-bs-target="#applicationsModal" style="cursor: pointer;">
               <div class="icon">
                 <i class="bi bi-broadcast"></i>
               </div>
-              <!-- <a href="service-details.html" class="stretched-link"> -->
-                <h3>Applications for a mobile, vision-based sensor system in passive production and intralogistics monitoring</h3>
-              </a>
-              <p>Prünte, P., Determann, J., Moencka, K., Erlich, E., Patki, D., Bitte, F., Gomse, M., & Schüppstuhl, T. (2024). 8th CIRP Conference on Intelligent Computation in Manufacturing Engineering.</p>
+              <h3>Applications for a mobile, vision-based sensor system in passive production and intralogistics monitoring</h3>
+              <p>Prünte, P., Determann, J., Moencka, K., Erlich, E., Patki, D., Bitte, F., Gomse, M., & Schüppstuhl, T. (2024). 18th CIRP Conference on Intelligent Computation in Manufacturing Engineering.</p>
             </div>
           </div><!-- End Service Item -->
 
+          <!-- Talk Item -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="service-item position-relative" data-bs-toggle="modal" data-bs-target="#talkModal" style="cursor: pointer;">
+              <div class="icon">
+                <i class="bi bi-mic"></i>
+              </div>
+              <h3>From Pit Stop to Podium: Mastering Technical Project Management</h3>
+              <p>A workshop on technical project management within the context of developing a fully autonomous Indy race car at Hack The North 2024.</p>
+            </div>
+          </div><!-- End Talk Item -->
 
         </div>
 
       </div>
 
     </section><!-- /Services Section -->
+
+    <!-- Betty Modal -->
+    <div class="modal fade" id="bettyModal" tabindex="-1" aria-labelledby="bettyModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="publication-item">
+              <div class="ratio ratio-16x9 mb-4">
+                <iframe src="https://drive.google.com/file/d/1tbdRRiZdlxsYH-9TIWh7731jCSpSqV1w/preview" 
+                        title="BETTY Dataset Video"
+                        allowfullscreen>
+                </iframe>
+              </div>
+              
+              <h3 class="publication-title mb-3">BETTY Dataset: A Multi-modal Dataset for Full-Stack Autonomy</h3>
+              
+              <p class="publication-authors mb-3">
+                Micah Nye*, Ayoub Raji, Andrew Saba, Eidan Erlich, Robert Exley, Aragya Goyal, Alexander Matros, 
+                Ritesh Misra, Matthew Sivaprakasam, Deva Ramanan, Sebastian Scherer
+              </p>
+              
+              <p class="publication-description mb-4">
+                We present the BETTY dataset, a large-scale, multi-modal dataset collected on several autonomous racing vehicles, 
+                targeting supervised and self-supervised state estimation, dynamics modeling, motion forecasting, perception, and more. 
+                Existing large-scale datasets, especially autonomous vehicle datasets, focus primarily on supervised perception, planning, 
+                and motion forecasting tasks. Our work enables multi-modal, data-driven methods by including all sensor inputs and the 
+                outputs from the software stack, along with semantic metadata and ground truth information. The dataset encompasses 4 years 
+                of data, currently comprising over 13 hours and 32 TB, collected on autonomous racing vehicle platforms. This data spans 6 
+                diverse racing environments, including high-speed oval courses, for single and multi-agent algorithm evaluation in 
+                feature-sparse scenarios, as well as high-speed road courses with high longitudinal and lateral accelerations and tight, 
+                GPS-denied environments. It captures highly dynamic states, such as 63 m/s crashes, loss of tire traction, and operation 
+                at the limit of stability. By offering a large breadth of cross-modal and dynamic data, the BETTY dataset enables the 
+                training and testing of full autonomy stack pipelines, pushing the performance of all algorithms to the limits.
+              </p>
+
+              <div class="publication-links">
+                <a href="https://pitt-mit-iac.github.io/betty-dataset/" 
+                   class="btn btn-outline-primary" 
+                   target="_blank">
+                   <i class="bi bi-journal-text me-2"></i>Project Website
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Passive Monitoring Modal -->
+    <div class="modal fade" id="passiveMonitoringModal" tabindex="-1" aria-labelledby="passiveMonitoringModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="publication-item">
+              <h3 class="publication-title mb-3">Leveraging passive monitoring applications in production and intralogistics</h3>
+              
+              <p class="publication-authors mb-3">
+                Moencka, K., Prüntea, P., Determann, J., Erlich, E., Patki, D., Bitte, F., Gomse, M., & Schüppstuhl, T.
+              </p>
+              
+              <p class="publication-description mb-4">
+                Today's rapidly evolving industrial landscape and the progressive digitization of products, processes, and resources require massive amounts of
+                online data on the current production and logistical status. Fixed-positioned sensor systems have a constrained Field of View (FoV), while a
+                mobile system can significantly extend these, enabling further applications due to the larger observed space. In this work, we elaborate on potential
+                applications that utilize incidentally acquired data from various locations from the perspective of a mobile, vision-based sensor system. We
+                exemplarily demonstrate an application within the scope of capturing and triggering the intralogistics chain with data from a vision-based sensor
+                system that can be carried by an Autonomous Guided Vehicle (AGV).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Talk Modal -->
+    <div class="modal fade" id="talkModal" tabindex="-1" aria-labelledby="talkModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="talk-item">
+              <div class="ratio ratio-16x9 mb-4">
+                <iframe src="https://www.youtube.com/embed/JeipN_uZhh0" 
+                        title="From Pit Stop to Podium: Mastering Technical Project Management" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+              </div>
+              
+              <h3 class="talk-title mb-3">From Pit Stop to Podium: Mastering Technical Project Management for Complex Engineering Teams</h3>
+              
+              <p class="talk-description mb-4">
+                This workshop focuses on technical project management within the context of developing a fully autonomous Indy race car. 
+                Participants will learn strategies for leading a large, multi-layered, technically diverse team through the stages of 
+                designing, building, and racing a self-driving race car.
+              </p>
+
+              <div class="talk-links">
+                <a href="https://www.hackthenorth.com/2024-workshop-from-pit-stop-to-podium-hackpack" 
+                   class="btn btn-outline-primary me-3" 
+                   target="_blank">
+                   <i class="bi bi-file-earmark-text me-2"></i>Hackpack
+                </a>
+                <a href="https://www.hackthenorth.com/2024-workshop-from-pit-stop-to-podium" 
+                   class="btn btn-outline-primary" 
+                   target="_blank">
+                   <i class="bi bi-camera-video me-2"></i>Recording
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Applications Modal -->
+    <div class="modal fade" id="applicationsModal" tabindex="-1" aria-labelledby="applicationsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="publication-item">
+              <h3 class="publication-title mb-3">Applications for a mobile, vision-based sensor system in passive production and intralogistics monitoring</h3>
+              
+              <p class="publication-authors mb-3">
+                Prünte, P., Determann, J., Moencka, K., Erlich, E., Patki, D., Bitte, F., Gomse, M., & Schüppstuhl, T.
+              </p>
+              
+              <p class="publication-description mb-4">
+                Today's rapidly evolving industrial landscape and the progressive digitization of production processes require massive amounts of real-time data on the current production and logistical status. This work proposes a multi-modal mobile sensor system that captures and perceives the production facility environment and fits into a standard load carrier, e.g., to be transported using logistic assets and existing transport routes. In contrast to using numerous stationary sensor solutions, the mobile system especially stands out in lot size one production sites, e.g., in aircraft assembly lines. Besides presenting the overall system, we elaborate on possible applications and prototypical demonstrate and evaluate these.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </main>
 
