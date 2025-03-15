@@ -431,12 +431,12 @@
         transition: all 0.3s ease;
         border: 1px solid rgba(255, 255, 255, 0.1);
         overflow: hidden;
+        cursor: pointer;
       }
 
       .course-bubble:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.08);
       }
 
       .course-code {
@@ -455,20 +455,45 @@
       .course-description {
         font-size: 0.9em;
         color: rgba(255, 255, 255, 0.7);
-        opacity: 0;
         max-height: 0;
         overflow: hidden;
-        transition: all 0.3s ease-in-out;
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, margin-top 0.3s ease-in-out;
+        opacity: 0;
+        margin-top: 0;
       }
 
-      .course-bubble:hover .course-description {
+      .course-bubble.active .course-description {
         opacity: 1;
-        max-height: 300px; /* Adjust this value based on your content */
+        max-height: 300px;
         margin-top: 10px;
+      }
+
+      .course-bubble::after {
+        content: '+';
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 1.2em;
+        transition: transform 0.3s ease;
+      }
+
+      .course-bubble.active::after {
+        transform: rotate(45deg);
       }
     </style>
 
-
+    <!-- Add this script before the closing body tag -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const courseBubbles = document.querySelectorAll('.course-bubble');
+        
+        courseBubbles.forEach(bubble => {
+          bubble.addEventListener('click', function() {
+            this.classList.toggle('active');
+          });
+        });
+      });
+    </script>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
