@@ -1,0 +1,109 @@
+/* Minimal, shared styles (no frameworks). Keep lightweight. */
+
+/* Color tokens */
+:root {
+  --bg: #f6f2ea; /* off-white/beige */
+  --text: #1b1e23; /* near-black */
+  --muted: #5b616b;
+  --accent: #2f3e63; /* muted navy */
+  --accent-weak: #3c4e7a;
+  --border: #e2ddd3;
+  --focus: #0ea5e9;
+}
+
+/* Typography */
+html { font-size: 16px; }
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Merriweather, Georgia, Cambria, "Times New Roman", Times, serif;
+  color: var(--accent);
+  line-height: 1.25;
+  margin: 0 0 0.5em 0;
+}
+
+p, li { line-height: 1.65; }
+
+/* Layout helpers */
+.container-narrow {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.stack-sm > * + * { margin-top: 0.5rem; }
+.stack-md > * + * { margin-top: 1rem; }
+.stack-lg > * + * { margin-top: 1.5rem; }
+
+/* Links */
+a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+a:hover { color: var(--accent-weak); }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.btn:hover { background: #e9edf6; }
+.btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.btn-primary:hover { background: var(--accent-weak); border-color: var(--accent-weak); }
+
+/* Cards */
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+/* Lists */
+.plain-list { list-style: none; padding: 0; margin: 0; }
+.plain-list li { padding-left: 0; }
+
+/* Accessibility */
+:focus { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+/* Images */
+img { max-width: 100%; height: auto; }
+
+/* Header/Footer spacing alignment with existing template */
+.page-title { background: transparent; }
+
+/* Timeline basics (for experience) */
+.timeline { border-left: 2px solid var(--border); padding-left: 1rem; }
+.timeline-item { position: relative; margin: 1.25rem 0; }
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0.35rem;
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+.timeline-item h3 { margin: 0 0 0.25rem 0; }
+.timeline-meta { color: var(--muted); font-size: 0.95rem; }
+
+/* Utilities */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,1px,1px); border: 0; }
+
+/* Nav target hit areas for mobile (augment existing) */
+nav a { padding: 0.5rem 0.25rem; display: inline-block; }
+
